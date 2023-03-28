@@ -12,7 +12,7 @@ public class App {
 
         // fazer uma conexão HTTP á API e buscar os TOP 250 Filmes
 
-        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/MostPopularTVs.json";
+        String url = "https://imdb-api.com/en/API/Top250Movies/k_vch908rk";
         URI endereco = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
@@ -28,8 +28,9 @@ public class App {
             System.out.println(filme.get("title"));
             System.out.println(filme.get("image"));
             System.out.println(filme.get("imDbRating"));
+            System.out.println();
             
-            
+
         }
 
     }
