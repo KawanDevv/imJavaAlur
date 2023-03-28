@@ -28,8 +28,6 @@ public class App {
             System.out.println(filme.get("title"));
             System.out.println(filme.get("image"));
             System.out.println(filme.get("imDbRating"));
-            System.out.println();
-            System.out.println();
             
         }
 
