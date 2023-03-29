@@ -9,7 +9,7 @@ public class GeradoraDeFigurinhas {
     public void cria() throws Exception {
 
         // leitura da imagem
-        BufferedImage imagemOriginal = ImageIO.read(new File("entrada/imgTeste.png"));
+        BufferedImage imagemOriginal = ImageIO.read(new File("alura-stickers/entrada/imgTeste.jpg"));
 
         // cria nova imagem em memória com transparência e com tamanho novo
 
@@ -26,7 +26,7 @@ public class GeradoraDeFigurinhas {
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
         // escrever uma mensagem na nova imagem
-        ImageIO.write(novaImagem, "png", new File("saida/figurinha.png"));
+        ImageIO.write(novaImagem, "jpg", new File("alura-stickers/saida/figurinha.png"));
         // escrever a nova imagem em um arquivo
 
 
