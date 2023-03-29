@@ -26,7 +26,7 @@ public class GeradoraDeFigurinhas {
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
         // escrever uma mensagem na nova imagem
-        ImageIO.write(novaImagem, "jpg", new File("alura-stickers/saida/figurinha.png"));
+        ImageIO.write(novaImagem, "png", new File("alura-stickers/saida/figurinha.png"));
         // escrever a nova imagem em um arquivo
 
 
