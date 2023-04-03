@@ -39,15 +39,15 @@ public class GeradoraDeFigurinhas {
 
         var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 64);
         graphics.setFont(fonte);
-        graphics.setColor(Color.YELLOW);
+        graphics.setColor(Color.YELLOW);    
         // escrever uma mensagem na nova imagem
 
-        graphics.drawString("TOPZERA", 100, novaAltura - 100);
+        graphics.drawString("TOPZERA", largura , novaAltura - 100);
 
 
         // escrever a nova imagem em um arquivo
 
-        ImageIO.write(novaImagem, "png", new File(nomeArquivo));
+         ImageIO.write(novaImagem, "png", new File(nomeArquivo));
     }
  
     

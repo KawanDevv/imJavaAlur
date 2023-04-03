@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URL;
@@ -25,21 +26,23 @@ public class App {
         var parser = new JasonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
 
+        var diretorio = new File("figurinhas/");
+        diretorio.mkdir();
         // exibir e manipular os dados
         var geradora = new GeradoraDeFigurinhas();
         for (Map<String,String> filme : listaDeFilmes) {
 
             String urlImagem = filme.get("image");
             String titulo = filme.get("title");
+
+
             InputStream inputStream = new URL(urlImagem).openStream();
 
-            String nomeArquivo = titulo + ".png";
-
+            String nomeArquivo = "figurinhas/" + titulo + ".png";
             
             geradora.cria(inputStream, nomeArquivo);
             
             System.out.println(titulo);
-           
             System.out.println();
             
 
